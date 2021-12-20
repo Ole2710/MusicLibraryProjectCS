@@ -50,7 +50,8 @@
     </Window.Resources>
 
     <StackPanel Margin="20">
-        <Label Content="Register" Foreground="White" FontSize="25" HorizontalAlignment="Center" FontFamily="Franklin Gothic Medium"/>
+        <Image x:Name="Logo" Height="45" VerticalAlignment="Top" Source="Images/LogoWhite.png" Margin="0,-5,0,0"/>
+        <!-- <Label Content="Register" Foreground="White" FontSize="25" HorizontalAlignment="Center" FontFamily="Franklin Gothic Medium"/> -->
         <Separator></Separator>
         <Label Content="Username" Foreground="White" HorizontalAlignment="Center" FontFamily="Franklin Gothic Medium"/>
         <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" Name="txtNewUsername" Background="#444444" Foreground="White" Width="175" HorizontalAlignment="Center"/>
