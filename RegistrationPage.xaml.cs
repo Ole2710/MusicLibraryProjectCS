@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SQLite;
 
 namespace MusicLibrary
 {
@@ -19,6 +20,7 @@ namespace MusicLibrary
     /// </summary>
     public partial class RegistrationPage : Window
     {
+        string dbConnectionString = "Music Library.db";
         public RegistrationPage()
         {
             InitializeComponent();
@@ -26,7 +28,29 @@ namespace MusicLibrary
 
         private void btnCreateAccount_Click(object sender, RoutedEventArgs e)
         {
+            //Link naar de Class
+            User Login = new User()
+            {
+                Username = txtNewUsername.Text,
+                Password = txtNewPassword.Password,
+                Email    = txtNewEmail.Text,
+            };
 
+            SQLiteConnection connection = new SQLiteConnection(dbConnectionString);
+            {
+                try
+                {
+                    connection.CreateTable<User>();
+                    connection.Insert(Login);
+                    System.Windows.MessageBox.Show("U bent geregistreerd");
+                    //LoginPage loginpage = new LoginPage();
+                    //this.Close();
+                }
+                catch
+                {
+                    Console.WriteLine("Error");
+                }
+            }
         }
     }
 }

@@ -20,6 +20,7 @@ namespace MusicLibrary
     /// </summary>
     public partial class LoginPage : Window
     {
+        string dbConnectionString = "Data Source=Music Library.db,Version = 3;"; 
         public LoginPage()
         {
             InitializeComponent();
@@ -34,27 +35,31 @@ namespace MusicLibrary
 
         private void btnLoginClick(object sender, RoutedEventArgs e)
         {
-            /*SqlConnection sqlCon = new SqlConnection(@"Data Source=C:\Users\oleme\source\repos\MusicLibrary; Initial Catalog = Music_Library; Integrated Security = True;");
-            try
-            {
-                if(sqlCon.State)
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-            
-            }*/
 
-            SQLiteConnection connection = new SQLiteConnection(App.strDatabasePath);
+            //Link naar de Class
+            User Login = new User()
             {
-                //connection.CreateTable<Login>();
-                //connection.Update(Login);
-            }
+                Username = txtUsername.Text,
+                Password = txtPassword.Password,
+            };
+
             Close();
 
+            SQLiteConnection connection = new SQLiteConnection(dbConnectionString);
+            {
+                try
+                {
+                    connection.Insert(Login);
+                    System.Windows.MessageBox.Show("U bent ingelogd!");
+                    //LoginPage loginpage = new LoginPage();
+                    //this.Close();
+                }
+                catch
+                {
+                    Console.WriteLine("Error");
+                }
+
+            }
         }
     }
 }

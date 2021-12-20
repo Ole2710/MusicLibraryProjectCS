@@ -14,8 +14,11 @@ namespace MusicLibrary
     public partial class App : Application
     {
         //Link naar database
-        static string strDatabaseName = "Music Library.db";
-        static string strFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public static string strDatabasePath = System.IO.Path.Combine(strFolderPath, strDatabaseName);
+        //Naam
+        static string sDatabaseName = "Music Library.db";
+        //Locatie
+        static string sFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        //Ingeven op Waze
+        public static string sDatabasePath = System.IO.Path.Combine(sFolderPath, sDatabaseName);
     }
 }
