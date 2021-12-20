@@ -29,8 +29,8 @@ namespace MusicLibrary
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             RegistrationPage registrationPage = new RegistrationPage();
-            this.Hide();
-            registrationPage.ShowDialog();
+            registrationPage.Show();
+            this.Close();
         }
 
         private void btnLoginClick(object sender, RoutedEventArgs e)
@@ -43,16 +43,12 @@ namespace MusicLibrary
                 Password = txtPassword.Password,
             };
 
-            Close();
-
             SQLiteConnection connection = new SQLiteConnection(dbConnectionString);
             {
                 try
                 {
                     connection.Insert(Login);
                     System.Windows.MessageBox.Show("U bent ingelogd!");
-                    //LoginPage loginpage = new LoginPage();
-                    //this.Close();
                 }
                 catch
                 {

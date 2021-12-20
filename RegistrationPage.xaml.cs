@@ -43,8 +43,11 @@ namespace MusicLibrary
                     connection.CreateTable<User>();
                     connection.Insert(Login);
                     System.Windows.MessageBox.Show("U bent geregistreerd");
-                    //LoginPage loginpage = new LoginPage();
-                    //this.Close();
+
+                    //redirect back to login page
+                    LoginPage loginPage = new LoginPage();
+                    loginPage.Show();
+                    this.Close();
                 }
                 catch
                 {
