@@ -44,11 +44,9 @@
 
         <Rectangle Grid.Column="1" Fill="#444444" Margin="0,45,0,66"/>
 
-        <Grid Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="315" Margin="0,38,5,0" VerticalAlignment="Top" Width="718">
-            <StackPanel>
-                <Image x:Name="Logo" HorizontalAlignment="Left" Height="45" Margin="-70,-38,0,0" VerticalAlignment="Top" Width="70" Source="Images/LogoWhite.png"/>
-            </StackPanel>
+        <Grid HorizontalAlignment="Left" Height="45" Margin="1,0,0,0" VerticalAlignment="Top" Width="69">
+            <Image x:Name="Logo" Height="45" VerticalAlignment="Top" Source="Images/LogoWhite.png" Margin="10,0"/>
         </Grid>
     </Grid>
-    
+
 </Window>
