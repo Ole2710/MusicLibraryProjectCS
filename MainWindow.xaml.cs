@@ -24,5 +24,16 @@ namespace MusicLibrary
         {
             InitializeComponent();
         }
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+        public void TextBoxSearch_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBoxSearch_GotFocus;
+        }
     }
 }
