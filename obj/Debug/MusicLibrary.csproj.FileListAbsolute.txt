@@ -74,3 +74,11 @@ C:\Users\Ole\source\repos\MusicLibrary\obj\Debug\MusicLibrary.csproj.CoreCompile
 C:\Users\Ole\source\repos\MusicLibrary\obj\Debug\MusicLibrary.csproj.CopyComplete
 C:\Users\Ole\source\repos\MusicLibrary\obj\Debug\MusicLibrary.exe
 C:\Users\Ole\source\repos\MusicLibrary\obj\Debug\MusicLibrary.pdb
+C:\Users\Ole\source\repos\MusicLibrary\bin\Debug\EntityFramework.dll
+C:\Users\Ole\source\repos\MusicLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ole\source\repos\MusicLibrary\bin\Debug\System.Data.SQLite.dll
+C:\Users\Ole\source\repos\MusicLibrary\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Ole\source\repos\MusicLibrary\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Ole\source\repos\MusicLibrary\bin\Debug\EntityFramework.xml
+C:\Users\Ole\source\repos\MusicLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ole\source\repos\MusicLibrary\bin\Debug\System.Data.SQLite.xml
