@@ -35,5 +35,21 @@ namespace MusicLibrary
             tb.Text = string.Empty;
             tb.GotFocus -= TextBoxSearch_GotFocus;
         }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btnGotoPlaylist_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
     }
 }

@@ -34,9 +34,21 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="35*"/>
             <ColumnDefinition Width="361*"/>
-            <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Playlist" Margin="5,80,5,0" VerticalAlignment="Top"  Foreground="White" FontFamily="Franklin Gothic Medium"/>
+
+        <Button BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="btnHome" Click="btnHome_Click" Content="Home" Margin="5,75,5,0" VerticalAlignment="Top"  Background="#151515" Foreground="White" FontFamily="Franklin Gothic Demi" HorizontalAlignment="Stretch"/>
+        <Button BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="btnGotoPlaylist" Click="btnGotoPlaylist_Click" Content="Playlist" Margin="5,105,5,0" VerticalAlignment="Top"  Background="#151515" Foreground="White" FontFamily="Franklin Gothic Demi" HorizontalAlignment="Stretch"/>
+        <Button BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="btnLogout" Content="Log Out" HorizontalAlignment="Center" Margin="5,335,5,0" VerticalAlignment="Top" Width="54" Background="#151515" Foreground="White" Click="btnLogout_Click" FontFamily="Franklin Gothic Demi"/>
+
         <TextBox GotFocus="TextBoxSearch_GotFocus" Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="txtSearch" Grid.Column="1" Height="23" Margin="207,10,206,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Background="#444444" Foreground="White" TextChanged="txtSearch_TextChanged" FontFamily="Franklin Gothic Medium"/>
+
+        <Rectangle Grid.Column="1" Fill="#444444" Margin="0,45,0,66"/>
+
+        <Grid Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="315" Margin="0,38,5,0" VerticalAlignment="Top" Width="718">
+            <StackPanel>
+                <Image x:Name="Logo" HorizontalAlignment="Left" Height="45" Margin="-70,-38,0,0" VerticalAlignment="Top" Width="70" Source="Images/LogoWhite.png"/>
+            </StackPanel>
+        </Grid>
     </Grid>
+    
 </Window>
